@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@id/home2">
+    <activity
+        android:id="@+id/home2"
+        android:name="com.example.dentalcare.Home"
+        android:label="activity_home"
+        tools:layout="@layout/activity_home" />
+    <activity
+        android:id="@+id/login"
+        android:name="com.example.dentalcare.Login"
+        android:label="activity_login"
+        tools:layout="@layout/activity_login" />
+    <activity
+        android:id="@+id/lostPassword_1"
+        android:name="com.example.dentalcare.LostPassword_1"
+        android:label="activity_lost_password1"
+        tools:layout="@layout/activity_lost_password1" />
+    <activity
+        android:id="@+id/lostPassword_2"
+        android:name="com.example.dentalcare.LostPassword_2"
+        android:label="activity_lost_password2"
+        tools:layout="@layout/activity_lost_password2" />
+    <activity
+        android:id="@+id/lostPassword_3"
+        android:name="com.example.dentalcare.LostPassword_3"
+        android:label="activity_lost_password3"
+        tools:layout="@layout/activity_lost_password3" />
+    <activity
+        android:id="@+id/register"
+        android:name="com.example.dentalcare.Register"
+        android:label="activity_register"
+        tools:layout="@layout/activity_register" />
+</navigation>

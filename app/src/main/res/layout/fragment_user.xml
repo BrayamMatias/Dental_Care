@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".UserFragment">
+
+    <!-- TODO: Update blank fragment layout -->
+    <TextView
+        android:id="@+id/TxtTittle"
+        android:layout_width="200dp"
+        android:layout_height="50dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="20sp"
+        android:layout_marginTop="80sp"
+        android:layout_marginEnd="20sp"
+        android:text="Usuario"
+        android:textAlignment="center"
+        android:textColor="#365B6D"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        tools:layout_editor_absoluteX="109dp"
+        tools:layout_editor_absoluteY="26dp" />
+
+    <Button
+        android:id="@+id/BtnCerrarSesion"
+        android:layout_width="357dp"
+        android:layout_height="63dp"
+        android:layout_below="@+id/TxtTittle"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginHorizontal="30dp"
+        android:layout_marginStart="30sp"
+        android:layout_marginTop="80sp"
+        android:layout_marginEnd="30sp"
+        android:backgroundTint="#365B6D"
+        android:fontFamily="sans-serif-medium"
+        android:onClick="cerrarSesion"
+        android:text="Cerrar Sesión"
+        android:textAlignment="center"
+        android:textColor="#FFF"
+        android:textStyle="bold"
+        android:typeface="monospace"
+        tools:layout_editor_absoluteX="27dp"
+        tools:layout_editor_absoluteY="564dp" />
+
+</RelativeLayout>

@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="350sp"
+    android:layout_height="475sp"
+    android:background="@color/teal_700"
+    android:padding="5sp"
+    android:layout_gravity="center">
+
+    <TextView
+        android:id="@+id/txtClose"
+        android:layout_width="30sp"
+        android:layout_height="30sp"
+        android:layout_marginTop="5sp"
+        android:layout_marginEnd="15sp"
+        android:text="X"
+        android:textColor="@color/white"
+        android:textStyle="bold"
+        android:gravity="center"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:background="@drawable/cerclebackground"/>
+
+
+    <TextView
+        android:id="@+id/txtTitulo1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="50sp"
+        android:layout_marginTop="50sp"
+        android:layout_marginEnd="50sp"
+        android:text="Selecciona una opción"
+        android:textColor="@color/white"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:id="@+id/txtTitulo2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20sp"
+        android:text="Cargar desde dispositivo o Tomar una foto"
+        android:textColor="@color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtTitulo1"
+        tools:ignore="MissingConstraints" />
+
+    <Button
+        android:id="@+id/btnCargarFoto"
+        android:layout_width="300sp"
+        android:layout_height="50sp"
+        android:layout_marginStart="30sp"
+        android:layout_marginTop="80sp"
+        android:layout_marginEnd="30sp"
+        android:background="@color/white"
+        android:text="Cargar imágen"
+        android:textColor="@color/teal_700"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtTitulo2"
+        tools:ignore="MissingConstraints" />
+
+    <Button
+        android:id="@+id/btnTomarFoto"
+        android:layout_width="300sp"
+        android:layout_height="50sp"
+        android:layout_marginStart="30sp"
+        android:layout_marginTop="20sp"
+        android:layout_marginEnd="30sp"
+        android:background="@color/white"
+        android:text="Tomar foto"
+        android:textColor="@color/teal_700"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnCargarFoto"
+        tools:ignore="MissingConstraints" />
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

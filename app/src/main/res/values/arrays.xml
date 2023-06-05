@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string-array name="RespuestasP1">
+        <item>@string/R1P1</item>
+        <item>@string/R2P1</item>
+        <item>@string/R3P1</item>
+        <item>@string/R4P1</item>
+    </string-array>
+
+    <string-array name="RespuestasP2">
+        <item>@string/R1P2</item>
+        <item>@string/R2P2</item>
+        <item>@string/R3P2</item>
+    </string-array>
+
+    <string-array name="RespuestasP3">
+        <item>@string/R1P3</item>
+        <item>@string/R2P3</item>
+        <item>@string/R3P3</item>
+    </string-array>
+
+    <string-array name="RespuestasP4">
+        <item>@string/R1P4</item>
+        <item>@string/R2P4</item>
+    </string-array>
+
+    <string-array name="RespuestasP5">
+        <item>@string/R1P5</item>
+        <item>@string/R2P5</item>
+    </string-array>
+
+</resources>

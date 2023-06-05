@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".Presentacion">
+
+    <ImageButton
+        android:id="@+id/BtnCancel"
+        android:layout_width="150px"
+        android:layout_height="150px"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="10sp"
+        android:layout_marginTop="10sp"
+        android:backgroundTint="#F9F9F9"
+        android:onClick="Cancel"
+        android:src="@mipmap/cancel" />
+
+    <TextView
+        android:id="@+id/TxtTittle"
+        android:layout_width="350dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="20sp"
+        android:layout_marginTop="80sp"
+        android:layout_marginEnd="20sp"
+        android:text="Análisis"
+        android:textAlignment="center"
+        android:textColor="#365B6D"
+        android:textSize="50sp"
+        android:textStyle="bold"
+        tools:layout_editor_absoluteX="109dp"
+        tools:layout_editor_absoluteY="26dp" />
+
+    <ImageView
+        android:id="@+id/imgViewFoto"
+        android:layout_width="350sp"
+        android:layout_height="350sp"
+        android:layout_below="@+id/TxtTittle"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="20sp"
+        android:layout_marginTop="50sp"
+        android:layout_marginEnd="20sp" />
+
+    <TextView
+        android:id="@+id/txtViewPrueba"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/imgViewFoto"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="20sp"
+        android:layout_marginTop="20sp"
+        android:layout_marginEnd="20sp"
+        android:text="" />
+
+    <Button
+        android:id="@+id/btnEnviarDatos"
+        android:layout_width="330dp"
+        android:layout_height="70dp"
+        android:layout_below="@+id/txtViewPrueba"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="30sp"
+        android:layout_marginTop="30sp"
+        android:layout_marginEnd="30sp"
+        android:backgroundTint="#365B6D"
+        android:fontFamily="sans-serif-medium"
+        android:text="Continuar"
+        android:textAlignment="center"
+        android:textColor="#FFF"
+        android:textStyle="bold"
+        android:typeface="monospace"
+        tools:layout_editor_absoluteX="27dp"
+        tools:layout_editor_absoluteY="564dp" />
+
+</RelativeLayout>

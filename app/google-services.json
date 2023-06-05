@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "608713684683",
+    "project_id": "dental-care-aa2ac",
+    "storage_bucket": "dental-care-aa2ac.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:608713684683:android:a8bc345d9edb5eda3c0d4e",
+        "android_client_info": {
+          "package_name": "com.example.dentalcare"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "608713684683-b79if2hqg9i8d2m8l61vr2vqlj2fm0f8.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDOrMqZWXLcY1EWiXKjOui8sSmkJn6GOzw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "608713684683-b79if2hqg9i8d2m8l61vr2vqlj2fm0f8.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

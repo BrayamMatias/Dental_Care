@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".HomeFragment">
+
+    <!-- TODO: Update blank fragment layout -->
+
+    <TextView
+        android:id="@+id/TxtTittle"
+        android:layout_width="350dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="20sp"
+        android:layout_marginTop="80sp"
+        android:layout_marginEnd="20sp"
+        android:text="¿Nuevo diagnóstico?"
+        android:textAlignment="center"
+        android:textColor="#365B6D"
+        android:textSize="50sp"
+        android:textStyle="bold"
+        tools:layout_editor_absoluteX="109dp"
+        tools:layout_editor_absoluteY="26dp" />
+
+    <TextView
+        android:id="@+id/txtMessage"
+        android:layout_width="340dp"
+        android:layout_height="25dp"
+        android:layout_below="@+id/TxtTittle"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginHorizontal="50dp"
+        android:layout_marginStart="20sp"
+        android:layout_marginTop="30sp"
+        android:layout_marginEnd="20sp"
+        android:background="#00FFFFFF"
+        android:text="@string/txtMessageTopHome"
+        android:textAlignment="center"
+        android:textColor="#365B6D"
+        tools:layout_editor_absoluteX="45dp"
+        tools:layout_editor_absoluteY="122dp" />
+
+    <Button
+        android:id="@+id/BtnResponderEncuesta"
+        android:layout_width="330dp"
+        android:layout_height="70dp"
+        android:layout_below="@+id/txtMessage"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="30sp"
+        android:layout_marginTop="50sp"
+        android:layout_marginEnd="20sp"
+        android:backgroundTint="#365B6D"
+        android:fontFamily="sans-serif-medium"
+        android:onClick="Questionnaire"
+        android:text="@string/BtnComenzar"
+        android:textAlignment="center"
+        android:textColor="#FFF"
+        android:textStyle="bold"
+        android:typeface="monospace"
+        tools:layout_editor_absoluteX="27dp"
+        tools:layout_editor_absoluteY="564dp" />
+
+
+</RelativeLayout>

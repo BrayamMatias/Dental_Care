@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shortcuts xmlns:android="http://schemas.android.com/apk/res/android">
+    <external-files-path
+        name="dental_care_img"
+        path="."></external-files-path>
+</shortcuts>

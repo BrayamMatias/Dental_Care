@@ -1,0 +1,298 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activity_VerDiagnostico">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true">
+
+    <ImageButton
+        android:layout_width="150px"
+        android:layout_height="150px"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="10sp"
+        android:layout_marginTop="10sp"
+        android:backgroundTint="#F9F9F9"
+        android:onClick="Back"
+        android:src="@mipmap/back" />
+
+    <ImageView
+        android:id="@+id/imgFotoFinal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="30sp"
+        android:layout_marginTop="100sp"
+        android:layout_marginEnd="30sp" />
+
+    <TextView
+        android:id="@+id/txtFecha"
+        android:layout_width="65sp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/imgFotoFinal"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="30sp"
+        android:layout_marginTop="20sp"
+        android:text="Fecha:"
+        android:textColor="#365B6D"
+        android:textSize="20sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/txtView_Fecha"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/imgFotoFinal"
+        android:layout_marginStart="5sp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="30sp"
+        android:layout_toEndOf="@+id/txtFecha"
+        android:text=""
+        android:textColor="#365B6D"
+        android:textSize="15sp" />
+
+    <TextView
+        android:id="@+id/txtHora"
+        android:layout_width="65sp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/imgFotoFinal"
+        android:layout_marginStart="10sp"
+        android:layout_marginTop="20sp"
+        android:layout_toEndOf="@+id/txtView_Fecha"
+        android:text="Hora:"
+        android:textColor="#365B6D"
+        android:textSize="20sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/txtView_Hora"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/imgFotoFinal"
+        android:layout_toEndOf="@+id/txtHora"
+        android:layout_marginStart="5sp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="30sp"
+        android:text=""
+        android:textColor="#365B6D"
+        android:textSize="15sp" />
+
+    <TextView
+        android:id="@+id/txtRPEncuesta"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/txtFecha"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="30sp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="30sp"
+        android:text="Respuestas de encuesta"
+        android:textColor="#365B6D"
+        android:textSize="20sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/txtPregunta1"
+        style="@style/Widget.AppCompat.AutoCompleteTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/txtRPEncuesta"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginHorizontal="40dp"
+        android:layout_marginStart="30sp"
+        android:layout_marginTop="20sp"
+        android:layout_marginEnd="20sp"
+        android:backgroundTint="#FFF"
+        android:ems="10"
+        android:selectAllOnFocus="false"
+        android:singleLine="false"
+        android:text="@string/Pregunta1"
+        android:textColor="#365B6D"
+        android:textSize="14sp"
+        android:typeface="normal"
+        tools:layout_editor_absoluteX="43dp"
+        tools:layout_editor_absoluteY="191dp" />
+    <TextView
+        android:id="@+id/edTxtPregunta1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/txtPregunta1"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginHorizontal="40dp"
+        android:layout_marginStart="30sp"
+        android:layout_marginTop="10sp"
+        android:layout_marginEnd="20sp"
+        android:backgroundTint="#ECECEC"
+        android:textColor="#4D4C4C" />
+    <TextView
+        android:id="@+id/txtPregunta2"
+        style="@style/Widget.AppCompat.AutoCompleteTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/edTxtPregunta1"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginHorizontal="40dp"
+        android:layout_marginStart="30sp"
+        android:layout_marginTop="10sp"
+        android:layout_marginEnd="20sp"
+        android:backgroundTint="#FFF"
+        android:ems="10"
+        android:selectAllOnFocus="false"
+        android:singleLine="false"
+        android:text="@string/Pregunta2"
+        android:textColor="#365B6D"
+        android:textSize="14sp"
+        android:typeface="normal"
+        tools:layout_editor_absoluteX="43dp"
+        tools:layout_editor_absoluteY="191dp" />
+
+    <TextView
+        android:id="@+id/edTxtPregunta2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/txtPregunta2"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginHorizontal="40dp"
+        android:layout_marginStart="30sp"
+        android:layout_marginTop="10sp"
+        android:layout_marginEnd="20sp"
+        android:backgroundTint="#ECECEC"
+        android:textColor="#4D4C4C" />
+
+    <TextView
+        android:id="@+id/txtPregunta3"
+        style="@style/Widget.AppCompat.AutoCompleteTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/edTxtPregunta2"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginHorizontal="40dp"
+        android:layout_marginStart="30sp"
+        android:layout_marginTop="10sp"
+        android:layout_marginEnd="20sp"
+        android:backgroundTint="#FFF"
+        android:ems="10"
+        android:selectAllOnFocus="false"
+        android:singleLine="false"
+        android:text="@string/Pregunta3"
+        android:textColor="#365B6D"
+        android:textSize="14sp"
+        android:typeface="normal"
+        tools:layout_editor_absoluteX="43dp"
+        tools:layout_editor_absoluteY="191dp" />
+
+    <TextView
+        android:id="@+id/edTxtPregunta3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/txtPregunta3"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginHorizontal="40dp"
+        android:layout_marginStart="30sp"
+        android:layout_marginTop="10sp"
+        android:layout_marginEnd="20sp"
+        android:backgroundTint="#ECECEC"
+        android:textColor="#4D4C4C" />
+
+    <TextView
+        android:id="@+id/txtPregunta4"
+        style="@style/Widget.AppCompat.AutoCompleteTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/edTxtPregunta3"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginHorizontal="40dp"
+        android:layout_marginStart="30sp"
+        android:layout_marginTop="10sp"
+        android:layout_marginEnd="20sp"
+        android:backgroundTint="#FFF"
+        android:ems="10"
+        android:selectAllOnFocus="false"
+        android:singleLine="false"
+        android:text="@string/Pregunta4"
+        android:textColor="#365B6D"
+        android:textSize="14sp"
+        android:typeface="normal"
+        tools:layout_editor_absoluteX="43dp"
+        tools:layout_editor_absoluteY="191dp" />
+
+    <TextView
+        android:id="@+id/edTxtPregunta4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/txtPregunta4"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginHorizontal="40dp"
+        android:layout_marginStart="30sp"
+        android:layout_marginTop="10sp"
+        android:layout_marginEnd="20sp"
+        android:backgroundTint="#ECECEC"
+        android:textColor="#4D4C4C"/>
+
+    <TextView
+        android:id="@+id/txtPregunta5"
+        style="@style/Widget.AppCompat.AutoCompleteTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/edTxtPregunta4"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginHorizontal="40dp"
+        android:layout_marginStart="30sp"
+        android:layout_marginTop="10sp"
+        android:layout_marginEnd="20sp"
+        android:backgroundTint="#FFF"
+        android:ems="10"
+        android:selectAllOnFocus="false"
+        android:singleLine="false"
+        android:text="@string/Pregunta5"
+        android:textColor="#365B6D"
+        android:textSize="14sp"
+        android:typeface="normal"
+        tools:layout_editor_absoluteX="43dp"
+        tools:layout_editor_absoluteY="191dp" />
+
+    <TextView
+        android:id="@+id/edTxtPregunta5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/txtPregunta5"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginHorizontal="40dp"
+        android:layout_marginStart="30sp"
+        android:layout_marginTop="10sp"
+        android:layout_marginEnd="20sp"
+        android:layout_marginBottom="50sp"
+        android:backgroundTint="#ECECEC"
+        android:textColor="#4D4C4C" />
+
+        </RelativeLayout>
+    </ScrollView>
+
+</RelativeLayout>

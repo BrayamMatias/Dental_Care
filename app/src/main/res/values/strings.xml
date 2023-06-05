@@ -1,0 +1,50 @@
+<resources>
+
+    <string name="app_name">Dental Care</string>
+    <string name="BtnRegistrar">¿No estás registrado? Registrate aqui.</string>
+    <string name="BtnIngresar">Ingresar</string>
+    <string name="BtnCrearCuenta">Crear cuenta</string>
+    <string name="BtnComenzar">Comenzar</string>
+    <string name="BtnLogin">¿Ya estás registrado? Iniciá sesión aqui.</string>
+
+    <string name="txtMessageTopHome">Analiza tu dentadura</string>
+
+
+    <string name="txtTitleLostPassword1">¿Olvidaste la contraseña?</string>
+    <string name="txtMessageTopLostPassword1">Ingresa tu correo electrónico para enviar un código de verificación</string>
+
+    <string name="txtTitleLostPassword2">Ingresa el código</string>
+    <string name="txtMessageTopLostPassword2">Ingresa el código enviado a tu correo electrónico</string>
+
+    <string name="txtTitleLostPassword3">Nueva contraseña</string>
+    <string name="txtMessageTopLostPassword3">Crea una nueva contraseña para tu cuenta</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+
+    <string name="Pregunta1">¿Cuántas veces al día cepillas tus dientes?</string>
+    <string name="R1P1">Una vez al día</string>
+    <string name="R2P1">Dos veces al día</string>
+    <string name="R3P1">Tres veces al día</string>
+    <string name="R4P1">No lo hago</string>
+
+    <string name="Pregunta2">¿Consumes alimentos o bebidas que son conocidos por causar manchas en los dientes, como café o té?</string>
+    <string name="R1P2">Sí, regularmente</string>
+    <string name="R2P2">A veces</string>
+    <string name="R3P2">No, nunca</string>
+
+    <string name="Pregunta3">¿Fumas o usas productos de tabaco regularmente?</string>
+    <string name="R1P3"> Sí, regularmente</string>
+    <string name="R2P3">A veces</string>
+    <string name="R3P3">No, nunca</string>
+
+    <string name="Pregunta4">¿Tienes algún hábito que pueda dañar los dientes, como morderse las uñas, masticar hielo o abrir objetos con los dientes?</string>
+    <string name="R1P4"> Sí, tengo hábitos</string>
+    <string name="R2P4">No, no tengo hábitos</string>
+
+    <string name="Pregunta5">¿Has tenido algún tipo de problema dental en el pasado, como caries, gingivitis o periodontitis?</string>
+    <string name="R1P5"> Sí, he tenido</string>
+    <string name="R2P5">No, nunca he tenido</string>
+
+
+</resources>
