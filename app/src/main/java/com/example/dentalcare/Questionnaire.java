@@ -231,6 +231,8 @@ public class Questionnaire extends AppCompatActivity {
         SimpleDateFormat fecha = new SimpleDateFormat("dd-MM-yyyy", Locale.getDefault());
         String Fecha = fecha.format(format);
 
+        String urlHSV = "";
+
         Date hformat = Calendar.getInstance().getTime();
         SimpleDateFormat hora = new SimpleDateFormat("hh:mm", Locale.getDefault());
         String Hora = hora.format(hformat.getTime());
@@ -249,6 +251,7 @@ public class Questionnaire extends AppCompatActivity {
         RPEncuesta.put("Fecha", Fecha);
         RPEncuesta.put("nameImg",nombreImagen);
         RPEncuesta.put("urlImg", urlImg);
+        RPEncuesta.put("urlHSV", urlHSV);
 
         db.collection("Diagnosticos").document(key).set(RPEncuesta).addOnSuccessListener(new OnSuccessListener<Void>() {
             @Override
@@ -276,6 +279,14 @@ public class Questionnaire extends AppCompatActivity {
     }
 
     public void Cancel(View view){
+        Intent cancel = new Intent(this, Home.class);
+        cancel.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+        startActivity(cancel);
+        finishAffinity();
+    }
+
+    public void onBackPressed() {
+        super.onBackPressed();
         Intent cancel = new Intent(this, Home.class);
         cancel.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
         startActivity(cancel);

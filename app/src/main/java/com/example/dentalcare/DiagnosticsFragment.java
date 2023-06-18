@@ -23,6 +23,7 @@ import com.google.firebase.firestore.FirebaseFirestore;
 import com.google.firebase.firestore.Query;
 import com.google.firebase.firestore.QueryDocumentSnapshot;
 import com.google.firebase.firestore.QuerySnapshot;
+import com.google.firebase.firestore.Source;
 
 
 import java.util.ArrayList;
@@ -31,6 +32,7 @@ import java.util.ArrayList;
 public class DiagnosticsFragment extends Fragment implements RecyclerViewInterface {
 
     ArrayList<DiagUser> newsArrayList;
+    Source source = Source.CACHE;
 
     ArrayList<String> keyList;
 
@@ -65,6 +67,7 @@ public class DiagnosticsFragment extends Fragment implements RecyclerViewInterfa
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
 
+
         recyclerView = getView().findViewById(R.id.RecyclerView);
         recyclerView.setHasFixedSize(true);
         recyclerView.setLayoutManager(new LinearLayoutManager(getActivity()));
@@ -81,7 +84,7 @@ public class DiagnosticsFragment extends Fragment implements RecyclerViewInterfa
     public void mostrarListado(){
         diagnosticosRef.whereEqualTo("uid", uid)
                 .orderBy(FieldPath.documentId(), Query.Direction.DESCENDING)
-                .get().addOnSuccessListener(new OnSuccessListener<QuerySnapshot>() {
+                .get(source).addOnSuccessListener(new OnSuccessListener<QuerySnapshot>() {
                     @Override
                     public void onSuccess(QuerySnapshot queryDocumentSnapshots) {
                         for (QueryDocumentSnapshot documentSnapshot : queryDocumentSnapshots){

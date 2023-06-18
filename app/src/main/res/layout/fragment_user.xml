@@ -3,32 +3,105 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".UserFragment">
 
     <!-- TODO: Update blank fragment layout -->
+
+    <ImageView
+        android:id="@+id/imgFotoFondo"
+        android:layout_width="wrap_content"
+        android:layout_height="300sp"
+        android:scaleType="centerCrop"
+        android:cropToPadding="true"
+        android:src="@drawable/fondo"
+        />
+
     <TextView
         android:id="@+id/TxtTittle"
         android:layout_width="200dp"
         android:layout_height="50dp"
+        android:layout_below="@+id/imgFotoFondo"
         android:layout_alignParentStart="true"
-        android:layout_alignParentTop="true"
         android:layout_alignParentEnd="true"
         android:layout_marginStart="20sp"
-        android:layout_marginTop="80sp"
+        android:layout_marginTop="-200dp"
         android:layout_marginEnd="20sp"
-        android:text="Usuario"
+        android:text="BIENVENIDO"
         android:textAlignment="center"
-        android:textColor="#365B6D"
-        android:textSize="30sp"
+        android:textColor="@color/white"
+        android:textSize="32sp"
         android:textStyle="bold"
         tools:layout_editor_absoluteX="109dp"
         tools:layout_editor_absoluteY="26dp" />
+    <TextView
+        android:id="@+id/TxtSubTittle"
+        android:layout_width="200dp"
+        android:layout_height="50dp"
+        android:layout_below="@+id/TxtTittle"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="20sp"
+        android:layout_marginTop="5dp"
+        android:layout_marginEnd="20sp"
+        android:text="a mi perfil"
+        android:textAlignment="center"
+        android:textColor="@color/white"
+        android:textSize="24sp"
+        android:textStyle="normal"
+        tools:layout_editor_absoluteX="109dp"
+        tools:layout_editor_absoluteY="26dp" />
+
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/imgPerfil"
+        android:layout_width="150sp"
+        android:layout_height="150sp"
+        android:layout_below="@+id/TxtSubTittle"
+        android:layout_centerHorizontal="true"
+        android:scaleType="centerCrop"
+        android:src="@drawable/perfil"
+        app:civ_border_color="@color/teal_700"
+        app:civ_border_width="2dp" />
+
+    <TextView
+        android:id="@+id/txtViewNombre"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/imgPerfil"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="20sp"
+        android:layout_marginTop="10sp"
+        android:layout_marginEnd="20sp"
+        android:textAlignment="center"
+        android:text="Nombre"
+        android:textColor="@color/teal_700"
+        android:textSize="32sp"
+        android:textStyle="bold"
+        />
+    <TextView
+        android:id="@+id/txtViewApellidos"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/txtViewNombre"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="20sp"
+        android:layout_marginTop="10sp"
+        android:layout_marginEnd="20sp"
+        android:textAlignment="center"
+        android:text="Apellidos"
+        android:textColor="@color/teal_700"
+        android:textSize="32sp"
+        android:textStyle="bold"
+        />
 
     <Button
         android:id="@+id/BtnCerrarSesion"
         android:layout_width="357dp"
         android:layout_height="63dp"
-        android:layout_below="@+id/TxtTittle"
+        android:layout_below="@+id/txtViewApellidos"
         android:layout_alignParentStart="true"
         android:layout_alignParentEnd="true"
         android:layout_marginHorizontal="30dp"

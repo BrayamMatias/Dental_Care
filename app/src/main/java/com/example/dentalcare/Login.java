@@ -10,6 +10,7 @@ import android.content.SharedPreferences;
 import android.content.res.Configuration;
 import android.os.Bundle;
 import android.os.Handler;
+import android.util.Patterns;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.Toast;
@@ -73,8 +74,12 @@ public class Login extends AppCompatActivity {
         String email = correo.getText().toString();
         String password = contrasena.getText().toString();
 
-        if (email.equals("") || password.equals("")) {
-            Toast.makeText(this, "Complete todos los campos", Toast.LENGTH_SHORT).show();
+        if (email.equals("") || password.equals("") || !Patterns.EMAIL_ADDRESS.matcher(email).matches()) {
+            if(!Patterns.EMAIL_ADDRESS.matcher(email).matches()){
+                correo.setError("El correo no es valido.");
+            }else{
+                Toast.makeText(getApplicationContext(), "Complete los campos", Toast.LENGTH_SHORT).show();
+            }
             validacion();
         } else {
             auth.signInWithEmailAndPassword(correo.getText().toString().trim(), contrasena.getText().toString().trim())

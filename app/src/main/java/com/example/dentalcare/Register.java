@@ -1,6 +1,7 @@
 package com.example.dentalcare;
 
 import android.app.DatePickerDialog;
+import android.content.DialogInterface;
 import android.content.Intent;
 
 import androidx.annotation.NonNull;
@@ -8,7 +9,10 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.res.Configuration;
 import android.os.Bundle;
+import android.util.Patterns;
 import android.view.View;
+import android.view.inputmethod.InputMethod;
+import android.view.inputmethod.InputMethodManager;
 import android.widget.Button;
 import android.widget.DatePicker;
 import android.widget.EditText;
@@ -40,6 +44,7 @@ public class Register extends AppCompatActivity {
     private Button btnRegistrar;
     FirebaseDatabase firebaseDatabase;
     DatabaseReference databaseReference;
+    private boolean isCalendarDialogOpen = false;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -56,7 +61,6 @@ public class Register extends AppCompatActivity {
         contrasena = findViewById(R.id.edTxtPassword);
         fechaNacimiento = findViewById(R.id.cvCalendar);
         btnRegistrar = findViewById(R.id.BtnIngresar);
-
         btnRegistrar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -97,8 +101,12 @@ public class Register extends AppCompatActivity {
         String password = contrasena.getText().toString();
         String fecha = fechaNacimiento.getText().toString();
 
-        if (nombre.equals("") || apPaterno.equals("") || apMaterno.equals("") || email.equals("") || password.equals("") || fecha.equals("")) {
-            Toast.makeText(getApplicationContext(), "Complete los campos ", Toast.LENGTH_SHORT).show();
+        if (nombre.equals("") || apPaterno.equals("") || apMaterno.equals("") || email.equals("")||!Patterns.EMAIL_ADDRESS.matcher(email).matches() || password.equals("") || fecha.equals("")) {
+            if(!Patterns.EMAIL_ADDRESS.matcher(email).matches()){
+                correo.setError("El correo no es valido.");
+            }else{
+                Toast.makeText(getApplicationContext(), "Complete los campos", Toast.LENGTH_SHORT).show();
+            }
             validacion();
         } else {
             subirDatos(nombre, apPaterno, apMaterno, email, password, fecha);
@@ -129,10 +137,15 @@ public class Register extends AppCompatActivity {
     }
 
     public void abrirCalendario(View view) {
+
         Calendar cal = Calendar.getInstance();
         int anio = cal.get(Calendar.YEAR);
         int mes = cal.get(Calendar.MONTH);
         int dia = cal.get(Calendar.DAY_OF_MONTH);
+
+        int anioInicio = 1994;
+        int mesInicio = Calendar.JANUARY; // Ten en cuenta que los meses en Calendar se representan como valores enteros (0 - 11)
+        int diaInicio = 1;
 
         DatePickerDialog dpd = new DatePickerDialog(Register.this, new DatePickerDialog.OnDateSetListener() {
             @Override
@@ -141,6 +154,8 @@ public class Register extends AppCompatActivity {
                 fechaNacimiento.setText(fecha);
             }
         }, dia, mes, anio);
+
+        dpd.getDatePicker().init(anioInicio,mesInicio,diaInicio, null);
         dpd.show();
 
     }
